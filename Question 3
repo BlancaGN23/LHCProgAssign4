@@ -1,0 +1,45 @@
+//Blanca Nino - Feb 25th, 2020
+//LHC Programming Course
+//Assignment 4, Question 2
+//Finding the nth prime number
+
+
+using namespace std;
+#include <iostream>
+
+int main()
+{
+   int check,n=0,c=0;
+
+// Specify index n, # looking for
+   cout<<"Enter which prime number you are looking for: ";
+   cin>>n;
+// For integers from 2 to 10 million.
+  for(int i=2;i<=10000000;i++)
+  {
+    check=0;
+// Applying another for loop to get integers from 2 to half the value of i.
+    for(int j=2;j<=i/2;j++)
+    {
+// if division of numberes is not a whole number, checking if prime
+        if(i%j==0)
+        {
+          check=1;
+           break;
+        }
+    }
+// Keep cying through until index is the one specified
+  if(check==0)
+    c++;
+
+      if(c==n)
+     {
+
+      cout<<"Your prime number is: " <<i<<endl;
+      return 0;
+     }
+ }
+
+return 0;
+
+}
