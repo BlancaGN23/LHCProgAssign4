@@ -1,0 +1,43 @@
+//Blanca Nino - Feb 25th, 2020
+//LHC Programming Course
+//Assignment 4, Question 1
+//Fibbonaci Sequence: Find the sum of the even number terms for values that do not exceed four million
+
+
+
+using namespace std;
+#include <iostream>
+
+int main(){ 
+  //x + y are the Fib numbers, starting with the first two Fib numbers: 1 and 2
+  float x = 1;
+  float y = 2;
+   //this sum helps keep track of the reassignment of values
+  float sum;
+   //this is the running total sum of even values
+  float sum = 2;
+  //a is the sum of the two numbers/2, if integer, whole division = even number
+  float a;
+  
+  //while the value of the fib number is under 4million
+  while (sum<4000000){
+    //number = sum of previous 2
+    sum = x+y;
+    //redefine variables
+    x = y;
+    y = sum;
+    a = y/2;
+    //check to see if the new value is even, by dividing by two
+     if (a==int(a)){
+      //if even, then add the value to the running sum total
+      sum2=sum2+y;
+     }
+      else{ 
+      //do nothing, and move onto the next set of numbers
+      }
+      }
+//now the progra has found the fib number closest to 4 mill, print out sum of even values   
+  cout<<" Even sum of fib #s is :"<<sum2<<endl;
+  //is 4.61373e+06
+  }
+      
