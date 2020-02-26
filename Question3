@@ -1,0 +1,27 @@
+//Blanca Nino - Feb 25th, 2020
+//LHC Programming Course
+//Assignment 4, Question 3
+//For the first 100 numbers, find difference between the sum of squares and the square of the sum
+
+
+
+using namespace std;
+#include <iostream>
+
+int main(){
+  int x = 0;
+  int sq1 = 0;
+  int sum = 0;
+  int diff = 0;
+  
+  while (x <=100){
+    //while less than 100, add each number squared
+    sq1 = x*x + sq1;
+    //keeps running sum of all numbers
+    sum = x + sum;
+    //keeps the count
+    x = x+1; }
+    
+    //find difference
+    diff = (sum*sum) - sq1;
+    cout<<diff<<endl;}
